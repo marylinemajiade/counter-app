@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getMovies, deleteMovie } from "../services/fakeMovieService";
+import { getMovies } from "../services/fakeMovieService";
 
 class Movies extends Component {
   state = {
@@ -7,7 +7,7 @@ class Movies extends Component {
   };
 
   handleDelete = (movie) => {
-    const movies = this.state.movies.filter((m) => m._id != movie._id);
+    const movies = this.state.movies.filter((m) => m._id !== movie._id);
     this.setState({ movies });
   };
 
